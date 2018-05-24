@@ -4,8 +4,11 @@
             {{title}}
         </div>
         <div class="navbar-collapse menu-parent">
-            <ul class="menu-child1 nav navbar-nav">
+            <ul class="menu-child-left nav navbar-nav">
                 <li class="menu-child2" *ngFor="let menuOption of menuOptions">{{ menuOption }}</li>
+            </ul>
+            <ul class="menu-child-right nav navbar-nav">
+                <li class="menu-child2" *ngFor="let signUpOption of signUpOptions">{{ signUpOption }}</li>
             </ul>
         </div>
     </div>
