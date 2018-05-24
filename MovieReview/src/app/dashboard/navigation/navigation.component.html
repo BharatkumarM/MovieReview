@@ -1,14 +1,12 @@
-<nav class="navbar navbar-default navbar-custom">
-    <div class="navbar-title">
-        {{title}}
-    </div>
-    <div class="navbar-collapse flex-parent">
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-        </ul>
+<nav class="navbar navbar-custom navbar-inverse navbar-fixed-top">
+    <div class="nav-container">
+        <div class="navbar-title">
+            {{title}}
+        </div>
+        <div class="navbar-collapse menu-parent">
+            <ul class="menu-child1 nav navbar-nav">
+                <li class="menu-child2" *ngFor="let menuOption of menuOptions">{{ menuOption }}</li>
+            </ul>
+        </div>
     </div>
 </nav>

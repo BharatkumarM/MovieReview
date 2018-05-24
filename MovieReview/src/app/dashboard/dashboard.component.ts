@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'my-dashboard',
@@ -6,12 +6,6 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./dashboard.component.less']
 })
 
-export class DashboardComponent implements OnInit
+export class DashboardComponent
 {
-    public title: string = '';
-
-    public ngOnInit(): void
-    {
-        this.title = 'Review by AB';
-    }
 }

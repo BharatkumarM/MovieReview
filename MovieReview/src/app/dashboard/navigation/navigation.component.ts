@@ -9,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class NavigationComponent implements OnInit
 {
     public title: string = '';
+    public menuOptions:any = [];
     public ngOnInit(): void
     {
         this.title = 'Review by AB';
+        this.menuOptions = ['Home', 'Movies', 'News', 'Community'];
     }
 }
