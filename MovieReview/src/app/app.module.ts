@@ -4,18 +4,22 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { DashBoardModule } from './dashboard/dashboard.module';
 import { AppRoutes } from './app.route';
+import { NavigationComponent } from './dashboard/navigation/navigation.component';
+import { SearchBarComponent } from './dashboard/search-bar/search-bar.component';
+import { MovieTileComponent } from './dashboard/movie-tile/movie-tile.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavigationComponent,
+    SearchBarComponent,
+    MovieTileComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    DashBoardModule,
     AppRoutes
   ],
   providers: [],

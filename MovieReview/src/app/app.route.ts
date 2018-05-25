@@ -1,9 +1,9 @@
 import { Routes, RouterModule } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component'
+import { MovieTileComponent } from './dashboard/movie-tile/movie-tile.component'
 
 export const routes: Routes = [
     {
-        path: '', component: DashboardComponent
+        path: '', component: MovieTileComponent
     }
 ];
 

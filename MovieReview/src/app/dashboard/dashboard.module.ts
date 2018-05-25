@@ -1,20 +1,24 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+// import { NgModule } from '@angular/core';
+// import { CommonModule } from '@angular/common';
+// import { MovieTileComponent } from './movie-tile/movie-tile.component';
+// import { DashboardComponent } from './dashboard.component';
+// import { NavigationComponent } from './navigation/navigation.component';
+// import { SearchBarComponent } from './search-bar/search-bar.component';
+// // import { DashBoardRoutes } from './dashboard.route'
 
-import { DashboardComponent } from './dashboard.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { SearchBarComponent } from './search-bar/search-bar.component';
+// @NgModule({
+//     imports: [
+//         CommonModule
+//     ],
+//     declarations: [
+//         DashboardComponent,
+//         NavigationComponent,
+//         SearchBarComponent,
+//         MovieTileComponent
+//     ],
+//     providers: []
+// })
 
-@NgModule({
-    imports: [CommonModule],
-    declarations: [
-        DashboardComponent,
-        NavigationComponent,
-        SearchBarComponent
-        ],
-    providers: []
-})
-
-export class DashBoardModule
-{
-}
+// export class DashBoardModule
+// {
+// }
