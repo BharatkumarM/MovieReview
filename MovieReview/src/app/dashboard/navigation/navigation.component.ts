@@ -16,6 +16,6 @@ export class NavigationComponent implements OnInit
     {
         this.title = 'Review by AB';
         this.menuOptions = ['Home', 'Movies', 'News', 'Community'];
-        this.signUpOptions = ['Help', 'Login', 'SignUp'];
+        this.signUpOptions = ['Help', 'Login'];
     }
 }

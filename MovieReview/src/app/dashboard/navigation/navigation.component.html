@@ -3,13 +3,35 @@
         <div class="navbar-title">
             {{title}}
         </div>
-        <div class="navbar-collapse menu-parent">
-            <ul class="menu-child-left nav navbar-nav">
-                <li class="menu-child2" *ngFor="let menuOption of menuOptions">{{ menuOption }}</li>
-            </ul>
-            <ul class="menu-child-right nav navbar-nav">
-                <li class="menu-child2" *ngFor="let signUpOption of signUpOptions">{{ signUpOption }}</li>
-            </ul>
-        </div>
+        
+<ul class="nav justify-content-start" style="margin-right: 200px;margin-top: 10px">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Movies</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">News</a>
+  </li>
+  <li class="nav-item">
+        <a class="nav-link" href="#">Community</a>
+  </li>
+</ul>
+
+
+<ul class="nav justify-content-end" style="margin-left: 200px;margin-top: 10px">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Help</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Login</a>
+  </li>
+  <li class="nav-item">
+    <button type="button" class="btn btn-primary" style="border-radius: 30px; ">Sign Up</button>
+  </li>
+</ul>
+
+
     </div>
 </nav>
