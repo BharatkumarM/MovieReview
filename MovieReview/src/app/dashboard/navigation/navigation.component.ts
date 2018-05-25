@@ -11,6 +11,7 @@ export class NavigationComponent implements OnInit
     public title: string = '';
     public menuOptions:any = [];
     public signUpOptions:any = [];
+    
     public ngOnInit(): void
     {
         this.title = 'Review by AB';
