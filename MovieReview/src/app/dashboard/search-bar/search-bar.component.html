@@ -6,7 +6,7 @@
                 <div class="dropdown-menu">
                     <a class="dropdown-item" *ngFor="let searchOption of searchList">{{searchOption}}</a>
                 </div> -->
-                <select (ngModelChange)="onChange($event)">
+                <select class="btn btn-outline-secondary dropdown-toggle" (ngModelChange)="onChange($event)">
                     <option *ngFor="let option of searchList" [ngValue]="option"> {{option}} </option>
                 </select>
             </div>
