@@ -1,1 +1,39 @@
 <h1>Content Goes Here...to be done</h1>
+<!-- <ul>
+    <li *ngFor="let x of testArray(key,value)">
+      {{x.key}}
+    </li>
+</ul> -->
+<!-- <div class="card" style="width: 18rem;" *ngFor="let x of testArray2">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{x.title}}</h5>
+      <h5>{{x.year}}</h5>
+      <h5>{{x.movie_id}}</h5>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div> -->
+
+  <!-- <div class="row" *ngFor= "let x of testArray2">
+    <div class="col-sm-5">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{x.title}}</h5>
+          <p class="card-text">Year:{{x.year}}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="card-deck" class = "cards" *ngFor="let x of testArray2">
+        <div class="card">
+          <img class="card-img-top" src="http://cdn1-www.comingsoon.net/assets/uploads/gallery/angry-birds-1412173620/angrybirdsmovie0004.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{x.title}}</h5>
+            <p class="card-text">Year: {{x.year}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Genre : {{x.Genre}}</small>
+          </div>
+        </div>
+    </div>
