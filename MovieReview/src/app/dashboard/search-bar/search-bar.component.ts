@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DashboardService } from './../dashboard.service';
 
 @Component({
     selector: 'app-search',
@@ -8,8 +9,19 @@ import { Component, OnInit } from '@angular/core';
 export class SearchBarComponent implements OnInit
 {
     public searchList:any;
+
+    constructor(private dashboardService: DashboardService)
+    {
+
+    }
+
     public ngOnInit(): void
     {
-        this.searchList = ['Movies', 'TV Shows'];
+        this.searchList = ['All', 'Movies', 'TV Shows'];
+    }
+
+    public selectValue(value:any)
+    {
+        this.dashboardService.onSelectType(value);
     }
 }

@@ -1,4 +1,3 @@
-<h1>Content Goes Here...to be done</h1>
 <!-- <ul>
     <li *ngFor="let x of testArray(key,value)">
       {{x.key}}
@@ -25,7 +24,8 @@
       </div>
     </div> -->
 
-    <div class="card-deck" class = "cards" *ngFor="let x of testArray2">
+  <div *ngIf="selectedType == SelectTypes[1] || selectedType == SelectTypes[0]">
+    <div class="card-deck" class = "cards" *ngFor="let x of testArray2 | sortBy: 'year'">
         <div class="card">
           <img class="card-img-top" src="http://cdn1-www.comingsoon.net/assets/uploads/gallery/angry-birds-1412173620/angrybirdsmovie0004.jpg" alt="Card image cap">
           <div class="card-body">
@@ -36,4 +36,20 @@
             <small class="text-muted">Genre : {{x.Genre}}</small>
           </div>
         </div>
+    </div>
+    </div>
+
+<div *ngIf="selectedType == SelectTypes[2] || selectedType == SelectTypes[0]">
+     <div class="card-deck" class = "cards" *ngFor="let x of serialDetails | sortBy: 'year'">
+        <div class="card">
+          <img class="card-img-top" src="http://cdn1-www.comingsoon.net/assets/uploads/gallery/angry-birds-1412173620/angrybirdsmovie0004.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{x.title}}</h5>
+            <p class="card-text">Year: {{x.year}}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Genre : {{x.Genre}}</small>
+          </div>
+        </div>
+    </div>
     </div>
