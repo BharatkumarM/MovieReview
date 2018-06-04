@@ -12,16 +12,10 @@ export class SearchBarComponent implements OnInit
 
     constructor(private dashboardService: DashboardService)
     {
-
     }
 
     public ngOnInit(): void
     {
         this.searchList = ['All', 'Movies', 'TV Shows'];
-    }
-
-    public selectValue(value:any)
-    {
-        this.dashboardService.onSelectType(value);
     }
 }
