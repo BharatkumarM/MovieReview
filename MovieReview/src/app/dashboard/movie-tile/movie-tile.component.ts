@@ -864,8 +864,6 @@ export class MovieTileComponent implements OnInit {
   }
 
   public ngOnInit(): void {
-      $('#carouselExampleSlidesOnly').carousel({
-        interval: 1000
-      });
+      
   }
 }

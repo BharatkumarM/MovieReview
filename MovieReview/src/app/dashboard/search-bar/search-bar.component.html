@@ -1,15 +1,36 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <div class="top-search">
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <!-- <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                    (ngModelChange)="onChange($event)">{{searchList[0]}}</button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" *ngFor="let searchOption of searchList">{{searchOption}}</a>
-                </div> -->
-                <select class="btn btn-outline-secondary dropdown-toggle">
-                    <option *ngFor="let option of searchList" [ngValue]="option"> {{option}} </option>
-                </select>
-            </div>
-            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+  <select class="btn btn-primary">
+    <option *ngFor="let option of searchList" [ngValue]="option"> {{option}} </option>
+  </select>
+  <input type="text" class="input-search col-sm-10" id="example" name="example">
+
+  <div class="col-sm-10 searchSuggestion example">
+    <h2>TOP MOVIES NOW</h2>
+
+    <div class="searchResults">
+      <a href="/title/tt1520211/?ref_=nv_sr_1" class="poster">
+        <img src="https://m.media-amazon.com/images/M/MV5BZTA3OGU2Y2EtYWIxNy00ZThmLWJhNjYtMmU5NDk4ZWI3Yzc3XkEyXkFqcGdeQXVyNDI4MzQ0MzQ@._V1._SX40_CR0,0,40,54_.jpg"
+          style="background:url('https://i.media-imdb.com/images/mobile/film-40x54.png')" width="40" height="54">
+        <div class="suggestionlabel">
+          <span class="title">The Walking Dead</span>
+          <span class="extra">(2010)</span>
+          <div class="detail">Andrew Lincoln, Norman Reedus</div>
         </div>
+      </a>
+    </div>
+
+    <div class="searchResults">
+      <a href="/title/tt1520211/?ref_=nv_sr_1" class="poster">
+        <img src="https://m.media-amazon.com/images/M/MV5BZTA3OGU2Y2EtYWIxNy00ZThmLWJhNjYtMmU5NDk4ZWI3Yzc3XkEyXkFqcGdeQXVyNDI4MzQ0MzQ@._V1._SX40_CR0,0,40,54_.jpg"
+          style="background:url('https://i.media-imdb.com/images/mobile/film-40x54.png')" width="40" height="54">
+        <div class="suggestionlabel">
+          <span class="title">The Walking Dead</span>
+          <span class="extra">(2010)</span>
+          <div class="detail">Andrew Lincoln, Norman Reedus</div>
+        </div>
+      </a>
+    </div>
+
+  </div>
 </div>
