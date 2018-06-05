@@ -8,8 +8,10 @@ declare let $:any;
 })
 export class SearchBarComponent implements OnInit
 {   
-
-    public searchList:any;
+    public topType : any = "Movies and TV Shows";
+    public searchList : any;
+    public searchResult: any;
+    public objectkeys : any;
     constructor(private dashboardService: DashboardService)
     {
 
@@ -18,7 +20,6 @@ export class SearchBarComponent implements OnInit
     public ngOnInit(): void
     {
         this.searchList = ['All', 'Movies', 'TV Shows'];
-
         $('#example').focus(function() {
           $('div.example').show();
             $(document).bind('focusin.example click.example',function(e) {
@@ -28,10 +29,54 @@ export class SearchBarComponent implements OnInit
             });  
         });
         $('div.example').hide();
+        this.searchResult = [
+            {
+                "title":"Baahubali",
+                "movie_id":"1234",
+                "year":"2015",
+                "Genre":"Action"
+            },
+            {
+                "title":"Baahubali2",
+                "movie_id":"1235",
+                "year":"2018",
+                "Genre":"Action"
+            },
+            {
+                "title":"Deadpool2",
+                "movie_id":"1236",
+                "year":"2017",
+                "Genre":"Comedy"
+            },
+            {
+                "title":"Dark Night",
+                "movie_id":"1237",
+                "year":"2013",
+                "Genre":"Adventure"
+            },
+            {
+                "title":"Captain Marvel",
+                "movie_id":"1238",
+                "year":"2019",
+                "Genre":"Romance"
+            },
+            {
+                "title":"Avengers",
+                "movie_id":"1239",
+                "year":"2014",
+                "Genre":"Action"
+            }
+        ]
     }
 
     public selectValue(value:any)
     {
+        if(value == "All"){
+            this.topType = "Movies and TV Shows";
+        }
+        else{
+            this.topType = value;
+        }
         this.dashboardService.onSelectType(value);
     }
 
