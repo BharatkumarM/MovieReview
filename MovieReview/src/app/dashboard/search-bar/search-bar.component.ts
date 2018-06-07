@@ -71,5 +71,4 @@ export class SearchBarComponent implements OnInit {
         this.searchKeys = this.searchResult.map(function (el) { return el.title; });
         //console.log(this.searchKeys);
     }
-
 }
