@@ -3,34 +3,23 @@
   <select class="btn btn-primary">
     <option *ngFor="let option of searchList" [ngValue]="option"> {{option}} </option>
   </select>
-  <input type="text" class="input-search col-sm-10" id="example" name="example">
 
-  <div class="col-sm-10 searchSuggestion example">
+  <input type="text" class="form-control col-sm-8" [(ngModel)]="search"
+  (input)="onSearchChange($event.target.value)" id="example" name="example" aria-label="Text input with dropdown button">
+
+  <div class="col-sm-9 searchSuggestion example">
     <h2>TOP MOVIES NOW</h2>
 
-    <div class="searchResults">
+    <div class="searchResults" *ngFor="let x of searchResult | sortBy: 'year' | searchfilter : searchKeys : search">
       <a href="/title/tt1520211/?ref_=nv_sr_1" class="poster">
         <img src="https://m.media-amazon.com/images/M/MV5BZTA3OGU2Y2EtYWIxNy00ZThmLWJhNjYtMmU5NDk4ZWI3Yzc3XkEyXkFqcGdeQXVyNDI4MzQ0MzQ@._V1._SX40_CR0,0,40,54_.jpg"
           style="background:url('https://i.media-imdb.com/images/mobile/film-40x54.png')" width="40" height="54">
-        <div class="suggestionlabel">
-          <span class="title">The Walking Dead</span>
-          <span class="extra">(2010)</span>
-          <div class="detail">Andrew Lincoln, Norman Reedus</div>
-        </div>
+          <div class="suggestionlabel">
+            <span class="title">{{x.title}}</span>
+            <span class="extra">({{x.year}})</span>
+            <div class="detail">Andrew Lincoln, Norman Reedus</div>
+          </div>
       </a>
     </div>
-
-    <div class="searchResults">
-      <a href="/title/tt1520211/?ref_=nv_sr_1" class="poster">
-        <img src="https://m.media-amazon.com/images/M/MV5BZTA3OGU2Y2EtYWIxNy00ZThmLWJhNjYtMmU5NDk4ZWI3Yzc3XkEyXkFqcGdeQXVyNDI4MzQ0MzQ@._V1._SX40_CR0,0,40,54_.jpg"
-          style="background:url('https://i.media-imdb.com/images/mobile/film-40x54.png')" width="40" height="54">
-        <div class="suggestionlabel">
-          <span class="title">The Walking Dead</span>
-          <span class="extra">(2010)</span>
-          <div class="detail">Andrew Lincoln, Norman Reedus</div>
-        </div>
-      </a>
-    </div>
-
   </div>
 </div>
