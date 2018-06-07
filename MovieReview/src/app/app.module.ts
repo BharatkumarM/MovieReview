@@ -9,7 +9,8 @@ import { NavigationComponent } from './dashboard/navigation/navigation.component
 import { SearchBarComponent } from './dashboard/search-bar/search-bar.component';
 import { MovieTileComponent } from './dashboard/movie-tile/movie-tile.component';
 import { SortPipe } from './dashboard/shared/sort-by-pipe';
-import { DashboardService } from './dashboard/dashboard.service'
+import { DashboardService } from './dashboard/dashboard.service';
+import { SearchFilterPipe } from './dashboard/shared/search-pipe';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { DashboardService } from './dashboard/dashboard.service'
     NavigationComponent,
     SearchBarComponent,
     MovieTileComponent,
-    SortPipe
+    SortPipe,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,
