@@ -3,19 +3,17 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'searchfilter'
 })
 export class SearchFilterPipe implements PipeTransform {
-    transform(items: any, array:any, nameSearch: string){
+    transform(items: any, nameSearch: string){
       if(nameSearch == undefined || nameSearch == '')
       {
         return items;
       }
-      if(items && items.length && array.length){
+      if(items && items.length){
             return items.filter(item =>{
                 console.log(item);
-                if (item.title.toLowerCase().indexOf(nameSearch) === -1){
-                    console.log(item);
+                if (item.title.toLowerCase().indexOf(nameSearch.toLowerCase()) === -1){
                     return false;
                 }
-                console.log(item);
                 return true;
            })
         }
