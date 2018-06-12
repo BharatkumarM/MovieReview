@@ -1,0 +1,21 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<body>
+    "hello bharath"
+    <div id="div1">
+        <h2>click me</h2>
+    </div>
+    <button>Get External Content</button>
+</body>
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            $.get("/books", function (data, status) {
+                alert("Data: " + data.author + "\nStatus: " + status);
+            });
+        });
+    });
+</script>
+
+</html>

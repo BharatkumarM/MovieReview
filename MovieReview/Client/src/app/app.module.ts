@@ -11,6 +11,7 @@ import { MovieTileComponent } from './dashboard/movie-tile/movie-tile.component'
 import { SortPipe } from './dashboard/shared/sort-by-pipe';
 import { DashboardService } from './dashboard/dashboard.service';
 import { SearchFilterPipe } from './dashboard/shared/search-pipe';
+import { MovieTileService } from './dashboard/movie-tile/movie-tile.service'
 
 
 @NgModule({
@@ -29,7 +30,11 @@ import { SearchFilterPipe } from './dashboard/shared/search-pipe';
     AppRoutes
   ],
   providers: [
-    DashboardService
+    DashboardService,
+    MovieTileService
+  ],
+  exports: [
+    HttpModule
   ],
   bootstrap: [AppComponent]
 })
