@@ -12,6 +12,7 @@ import { SortPipe } from './dashboard/shared/sort-by-pipe';
 import { DashboardService } from './dashboard/dashboard.service';
 import { SearchFilterPipe } from './dashboard/shared/search-pipe';
 import { MovieTileService } from './dashboard/movie-tile/movie-tile.service'
+import { HomePageComponent } from './dashboard/home-page/home-page.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MovieTileService } from './dashboard/movie-tile/movie-tile.service'
     SearchBarComponent,
     MovieTileComponent,
     SortPipe,
-    SearchFilterPipe
+    SearchFilterPipe,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,

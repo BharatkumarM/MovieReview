@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class MovieTileService
 {
-    private SERVER_URL: string = 'http://127.0.0.1:8085/';
+    private SERVER_URL: string = 'http://127.0.0.1:5000/';
 
     constructor(private http: Http)
     {
