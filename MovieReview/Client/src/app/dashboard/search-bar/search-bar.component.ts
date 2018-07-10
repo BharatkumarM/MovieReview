@@ -1,5 +1,6 @@
 import { Component, OnInit, SimpleChanges, OnChanges } from '@angular/core';
 import { DashboardService } from './../dashboard.service';
+import { SearchBarService } from './search-bar.service';
 declare let $: any;
 
 @Component({
@@ -8,12 +9,17 @@ declare let $: any;
     styleUrls: ['./search-bar.component.less']
 })
 export class SearchBarComponent implements OnInit {
-
+    public try : any;
     public search: any;
     public searchList: any;
     public searchResult: any;
     public searchKeys:any;
-    constructor(private dashboardService: DashboardService) {
+    constructor(private dashboardService: DashboardService, private searchbarservice: SearchBarService) {
+        this.searchbarservice.getSearchDetails().subscribe((resp: any) => 
+        { 
+          this.try = resp;
+          console.log(this.try);
+        });
     }
 
     onSearchChange(searchValue : string ) {  
