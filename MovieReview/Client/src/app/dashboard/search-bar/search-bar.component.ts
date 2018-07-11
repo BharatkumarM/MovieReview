@@ -17,8 +17,7 @@ export class SearchBarComponent implements OnInit {
     constructor(private dashboardService: DashboardService, private searchbarservice: SearchBarService) {
         this.searchbarservice.getSearchDetails().subscribe((resp: any) => 
         { 
-          this.try = resp;
-          console.log(this.try);
+          this.searchResult = resp;
         });
     }
 
@@ -36,45 +35,7 @@ export class SearchBarComponent implements OnInit {
             });
         });
         $('div.example').hide();
-        this.searchResult = [
-            {
-                "title": "Baahubali",
-                "movie_id": "1234",
-                "year": "2015",
-                "Genre": "Action"
-            },
-            {
-                "title": "Baahubali2",
-                "movie_id": "1235",
-                "year": "2018",
-                "Genre": "Action"
-            },
-            {
-                "title": "Deadpool2",
-                "movie_id": "1236",
-                "year": "2017",
-                "Genre": "Comedy"
-            },
-            {
-                "title": "Dark Night",
-                "movie_id": "1237",
-                "year": "2013",
-                "Genre": "Adventure"
-            },
-            {
-                "title": "Captain Marvel",
-                "movie_id": "1238",
-                "year": "2019",
-                "Genre": "Romance"
-            },
-            {
-                "title": "Avengers",
-                "movie_id": "1239",
-                "year": "2014",
-                "Genre": "Action"
-            }
-        ];
-        this.searchKeys = this.searchResult.map(function (el) { return el.title; });
+        //this.searchKeys = this.searchResult.map(function (el) { return el.title; });
         //console.log(this.searchKeys);
     }
 }
