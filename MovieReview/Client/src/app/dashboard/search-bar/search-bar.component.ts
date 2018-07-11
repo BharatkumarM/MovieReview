@@ -10,6 +10,7 @@ declare let $: any;
 })
 export class SearchBarComponent implements OnInit {
     public try : any;
+    public showTop = true;
     public search: any;
     public searchList: any;
     public searchResult: any;
@@ -20,9 +21,22 @@ export class SearchBarComponent implements OnInit {
           this.searchResult = resp;
         });
     }
-
-    onSearchChange(searchValue : string ) {  
-        console.log(searchValue);}
+    
+    // if(search == undefined){
+    //     console.log("hai her");
+    // }
+    onSearchChange(searchValue : string ) { 
+        //this.showTop = false;
+        // if(searchValue == undefined){
+        //     this.showTop = true;
+        // }
+        // console.log(this.search);
+        // console.log(searchValue);
+    }
+    setPerson(x:any){
+        console.log(x);
+        console.log("hai");
+    }
 
     public ngOnInit(): void {
         this.searchList = ['All', 'Movies', 'TV Shows'];
@@ -35,7 +49,17 @@ export class SearchBarComponent implements OnInit {
             });
         });
         $('div.example').hide();
-        //this.searchKeys = this.searchResult.map(function (el) { return el.title; });
-        //console.log(this.searchKeys);
+
+        $('.seachInput').keyup(function() {
+  
+            // If value is not empty
+            if ($(this).val().length == 0) {
+              // Hide the element
+              $('.top').show();
+            } else {
+              // Otherwise show it
+              $('.top').hide();
+            }
+          }).keyup();
     }
 }
