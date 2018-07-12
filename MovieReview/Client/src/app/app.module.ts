@@ -14,6 +14,7 @@ import { SearchFilterPipe } from './dashboard/shared/search-pipe';
 import { MovieTileService } from './dashboard/movie-tile/movie-tile.service'
 import { HomePageComponent } from './dashboard/home-page/home-page.component';
 import { SearchBarService } from './dashboard/search-bar/search-bar.service';
+import { MovieDetailsComponent} from './dashboard/movie-details/movie-details.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SearchBarService } from './dashboard/search-bar/search-bar.service';
     MovieTileComponent,
     SortPipe,
     SearchFilterPipe,
-    HomePageComponent
+    HomePageComponent,
+    MovieDetailsComponent
   ],
   imports: [
     BrowserModule,

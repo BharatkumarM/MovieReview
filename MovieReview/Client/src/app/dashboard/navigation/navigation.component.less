@@ -16,6 +16,19 @@
     margin: 0px 10px 0px 10px;
 }
 
+li.dropdown:hover > .dropdown-menu {
+    display: block;
+    z-index: 99999;
+}
+ .navbar-nav>li>a{
+    color: blue;
+}
+.navbar-nav > li.dropdown:hover > a, 
+.navbar-nav > li.dropdown:hover > a:hover,
+.navbar-nav > li.dropdown:hover > a:focus {
+    background-color: rgb(231, 231, 231);
+    color: rgb(85, 85, 85);
+}
 .nav-container {
     display: flex;
     font-family: serif;

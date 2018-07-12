@@ -26,16 +26,11 @@ export class SearchBarComponent implements OnInit {
     //     console.log("hai her");
     // }
     onSearchChange(searchValue : string ) { 
-        //this.showTop = false;
-        // if(searchValue == undefined){
-        //     this.showTop = true;
-        // }
-        // console.log(this.search);
-        // console.log(searchValue);
+
     }
-    setPerson(x:any){
+    findResult(x:any){
         console.log(x);
-        console.log("hai");
+        alert(x);
     }
 
     public ngOnInit(): void {

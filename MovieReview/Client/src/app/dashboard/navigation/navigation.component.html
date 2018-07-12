@@ -1,20 +1,35 @@
-<nav class="navbar navbar-custom">
+<nav class="navbar navbar-custom navbar-default">
   <div class="nav-container">
-    <ul class="nav justify-content-start menu-left">
+    <ul class="nav justify-content-start menu-left navbar-nav">
       <span class="navbar-title">
         {{title}}
       </span>
       <li class="nav-item">
-        <span class="nav-link active" href="#">Home</span>
+        <a class="nav-link active" href=" ">Home</a>
       </li>
-      <li class="nav-item">
-        <span class="nav-link" href="#">Movies</span> 
+      <li class="nav-item dropdown">
+        <a href="" class=" nav-link dropdown-toggle" data-toggle="dropdown">Movies<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="movies">Top Movies</a></li>
+            <li><a href="#">New Releases</a></li>
+            <li><a href="#">Movie List</a></li>
+          </ul> 
       </li>
-      <li class="nav-item">
-        <span class="nav-link" href="#">News</span>
+      <li class="nav-item dropdown">
+        <a href="#" class=" nav-link dropdown-toggle" data-toggle="dropdown">TV Serials<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Most Viewed</a></li>
+            <li><a href="#">New Releases</a></li>
+            <li><a href="#">Genre</a></li>
+          </ul> 
       </li>
-      <li class="nav-item">
-        <span class="nav-link" href="#">Communities</span>
+      <li class="nav-item dropdown">
+        <a href="#" class=" nav-link dropdown-toggle" data-toggle="dropdown">Reviews<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Top Rated</a></li>
+            <li><a href="#">Recently Added</a></li>
+            <li><a href="#">Must Watch</a></li>
+          </ul> 
       </li>
     </ul>
 

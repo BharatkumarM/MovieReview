@@ -13,7 +13,7 @@
   <div class="col-sm-9 searchSuggestion example ">
     <h2 class="top">TOP MOVIES NOW</h2>
 
-    <div class="searchResults" *ngFor="let x of searchResult | sortBy: 'year' | searchfilter: search" (click)="setPerson(x)" >
+    <div class="searchResults" *ngFor="let x of searchResult | sortBy: 'year' | searchfilter: search" (click)="findResult(x)" >
       <a href="#" class="poster">
         <img src="https://m.media-amazon.com/images/M/MV5BZTA3OGU2Y2EtYWIxNy00ZThmLWJhNjYtMmU5NDk4ZWI3Yzc3XkEyXkFqcGdeQXVyNDI4MzQ0MzQ@._V1._SX40_CR0,0,40,54_.jpg"
           style="background:url('https://i.media-imdb.com/images/mobile/film-40x54.png')" width="40" height="54">
