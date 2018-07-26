@@ -2,33 +2,44 @@
     <div class="movie-nav">
         <h1 class="title">Movie Listing Grid</h1>
         <ul>
-            <li><a href=" ">Home</a></li>
-            <li><span class="glyphicon glyphicon-chevron-right"></span>Movie Listing</li>
+            <li>
+                <a href=" ">Home</a>
+            </li>
+            <li>
+                <span class="glyphicon glyphicon-chevron-right"></span>Movie Listing</li>
         </ul>
     </div>
 
     <div class="movie-list">
-            <div class="row">
-                <div class="col-sm-7 movie-list-table">
-                        <div class="topbar-filter">
-                                <p>Found <span>1,608 movies</span> in total</p>
-                                <label>Sort by:</label>
-                                <select>
-                                    <option value="popularity">Popularity Descending</option>
-                                    <option value="popularity">Popularity Ascending</option>
-                                    <option value="rating">Rating Descending</option>
-                                    <option value="rating">Rating Ascending</option>
-                                    <option value="date">Release date Descending</option>
-                                    <option value="date">Release date Ascending</option>
-                                </select>
-                                <a href="movielist.html" class="list"><i class="ion-ios-list-outline "></i></a>
-                                <a href="moviegrid.html" class="grid"><i class="ion-grid active"></i></a>
-                            </div>
-                </div>
-                <div class="col-sm-4 search-form">
-                    <p>Sed ut perspiciatis...</p>
+        <div class="row">
+            <div class="col-sm-8 movie-list-table">
+                <div class="topbar-filter">
+                    <p>Found
+                        <span>1,608 movies</span> in total</p>
+                    <div class="sortBy">
+                        <label>Sort by:</label>
+                        <select class="selectSortBy">
+                            <option value="popularity">Popularity Descending</option>
+                            <option value="popularity">Popularity Ascending</option>
+                            <option value="rating">Rating Descending</option>
+                            <option value="rating">Rating Ascending</option>
+                            <option value="date">Release date Descending</option>
+                            <option value="date">Release date Ascending</option>
+                        </select>
+                        
+                        <a  href="movielist.html" class="list icons">
+                            <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+                        </a>
+                        <a href="moviegrid.html" class="grid icons">
+                            <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+                        </a>
+                    </div>
                 </div>
             </div>
+            <div class="col-sm-3 search-form">
+                <p>Search Form</p>
+            </div>
+        </div>
     </div>
-    
+
 </div>
